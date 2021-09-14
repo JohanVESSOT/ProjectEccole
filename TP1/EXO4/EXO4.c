@@ -8,7 +8,7 @@ int NbrOppose (int y)
     return y - (2*y);
 }
 
-int NbrMoitier (int y)
+float NbrMoitier (int y)
 {
     return (double)y/2;
 }

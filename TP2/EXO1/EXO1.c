@@ -17,6 +17,5 @@ int main()
     {
         x++;
         printf("La valeur est : %d \n",x);
-
     }
 }
