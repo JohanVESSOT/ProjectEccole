@@ -8,7 +8,7 @@ int NbrOppose (int y)
     return y - (2*y);
 }
 
-float NbrMoitier (int y)
+double NbrMoitier (int y)
 {
     return (double)y/2;
 }
@@ -16,7 +16,6 @@ float NbrMoitier (int y)
 
 int main()
 {
-
     float m ;
     int x,y;
 
@@ -26,9 +25,6 @@ int main()
     y = NbrOppose(x);
     m = NbrMoitier(x);
 
-
     printf("La Valeur opposé est %d \n",y);
     printf("La moitié est %lf \n\n",m);
-    
-
 }
