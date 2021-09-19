@@ -7,10 +7,10 @@
 double PuissanceIterratif (int nombre,int puissance)
 {
     int i ;
-    double 
+    double res;
     for (i=1;i<puissance;i++)
     {
-        ;
+        res = res*res ;
     }
 }
 

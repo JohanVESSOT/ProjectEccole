@@ -1,48 +1,54 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-int min (int x,int y)
+
+void Min (int x,int y,int *min)
 {
     if (x<y)
     {
-        return x;
+        *min = x ;
+        return ;
     }
-    return y ;
-
+    *min = y ;
+    return ;
 }
 
-int max (int x,int y)
+void Max (int x,int y, int *max)
 {
     if (x<y)
     {
-        return y;
+        *max = y ;
+        return ;
     }
-    return x ;
+    *max = x ;
+    return ;
 
 }
 
-void MinMax (int* Tab,int x,int y)
+void MinMax (int *Pmin,int *Pmax,int x,int y)
 {
-    Tab[0]=min(x,y);
-    Tab[1]=max(x,y);
+    Min (x,y,Pmin) ;
+    Max (x,y,Pmax) ;
 }
 
 
 int main()
 {
 
-    int x,y ;
-    int Tab[2] ;
+    int min,max,x,y;
 
-    printf("\nSaisir la valeur de x :");
-    scanf("%d",&x);
-    printf("\nSaisir la valeur de y :");
-    scanf("%d",&y);
-    printf("\n");
 
-    MinMax(&Tab,x,y);
+    printf ("\nVeuillez entrer la valeur de X :") ;
+    scanf("%d",&x) ;
 
-    printf("\nLa valeur min est : %d \n",Tab[0]);
-    printf("\nLa valeur max est : %d \n",Tab[1]);
- 
+    printf ("\nVeuillez entrer la valeur de Y :") ;
+    scanf("%d",&y) ;
+
+    int *Pmin = &min ;
+    int *Pmax = &max ;
+    
+    MinMax (Pmin,Pmax,x,y);
+    printf("\nMin : %d",min);
+    printf("\nMax : %d \n",max); 
+
 }
