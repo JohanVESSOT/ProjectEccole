@@ -29,8 +29,7 @@ int main ()
 
     int Tab [10] = {-1,5,0,7,-3,4,0,-2,9,-6};
     int TabRes [10] = {0,0,0,0,0,0,0,0,0,0};
-
-
+    
     declaration(&Tab[0],&TabRes[0],10);
 
     for (int i =0;i<4;i++)
